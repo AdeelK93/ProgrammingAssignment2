@@ -1,3 +1,4 @@
+#creates the functions neccessary to solve the future matrix
 makeCacheMatrix <-function(x=matrix()){
   inv <- NULL
   set <- function(y) {
@@ -12,6 +13,7 @@ makeCacheMatrix <-function(x=matrix()){
        getinv = getinv)
 }
 
+#checks the cache to see if the matrix has already been solved, and if it hasn't, it goes ahead and solves it
 cacheSolve <- function(x, ...) {
   inv <- x$getinv()
   if(!is.null(inv)) {
